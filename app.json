@@ -1,0 +1,15 @@
+{
+    "name": "Playback Speed Remote Backend",
+    "description": "",
+    "website": "",
+    "repository": "",
+    "logo": "https://node-js-sample.herokuapp.com/node.svg",
+    "success_url": "/",
+    "scripts": {
+    },
+    "addons": [
+    ],
+    "env": {
+      "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+}
