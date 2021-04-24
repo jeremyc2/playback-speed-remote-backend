@@ -1,8 +1,8 @@
 {
     "name": "Playback Speed Remote Backend",
     "description": "",
-    "website": "",
-    "repository": "",
+    "website": "https://github.com/jeremyc2/playback-speed-remote-backend",
+    "repository": "https://github.com/jeremyc2/playback-speed-remote-backend",
     "logo": "https://node-js-sample.herokuapp.com/node.svg",
     "success_url": "/",
     "scripts": {
