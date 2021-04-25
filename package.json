@@ -1,12 +1,12 @@
 {
-    "name": "playback-speed-remote-backend",
-    "version": "0.0.1",
-    "description": "",
-    "dependencies": {
-      "express": "^4.17.1",
-      "socket.io": "^3.0.3"
-    },
-    "scripts": {
-      "start": "node index.js"
-    }
+  "name": "playback-speed-remote-backend",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
 }
