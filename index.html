@@ -33,15 +33,7 @@
         }
     </style>
     <script src="/socket.io/socket.io.js"></script>
-    <script defer>
-      var socket = io();
-
-      remote.querySelectorAll('button.speed').forEach((button, i) => {
-          button.addEventListener('click', () => {
-            socket.emit('change speed', i);
-          });
-      });
-    </script>
+    <script src="remote.js" defer></script>
 </head>
 <body>
     <form id="remote">

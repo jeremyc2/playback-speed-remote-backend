@@ -6,14 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playback Speed Controller</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script defer>
-        var socket = io();
-
-        socket.on('change speed', function(speed) {
-            window.speed = speed;
-            document.body.innerHTML = speed;
-        });
-    </script>
+    <script src="controller.js" defer></script>
 </head>
 <body>
     
