@@ -12,8 +12,8 @@ app.get('/*', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  socket.on('change speed', speed => {
-    io.emit('change speed', speed);
+  socket.on('change-speed', speed => {
+    io.emit('change-speed', speed);
   });
 });
 
