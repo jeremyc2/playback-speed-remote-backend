@@ -7,10 +7,10 @@ remote.querySelectorAll('button.speed').forEach((button, i) => {
     button.onclick = () => false;
 });
 
-remote.skipback.addEventListener('click', () => {
+remote.skipBack.addEventListener('click', () => {
   socket.emit('skip-back');
 });
-remote.skipback.onclick = () => false;
+remote.skipBack.onclick = () => false;
 
 remote.playPause.addEventListener('click', () => {
   socket.emit('play-pause');
