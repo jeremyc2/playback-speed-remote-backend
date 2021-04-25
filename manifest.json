@@ -1,0 +1,7 @@
+{
+    "manifest_version": 3,
+    "name": "Playback Speed Remote Backend",
+    "version": "1.0.0",
+    "display":      "standalone",
+    "orientation":  "landscape"
+}
