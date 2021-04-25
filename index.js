@@ -15,6 +15,15 @@ io.on('connection', (socket) => {
   socket.on('change-speed', speed => {
     io.emit('change-speed', speed);
   });
+  socket.on('skip-back', () => {
+    io.emit('skip-back');
+  });
+  socket.on('play-pause', () => {
+    io.emit('play-pause');
+  });
+  socket.on('skip-forward', () => {
+    io.emit('skip-forward');
+  });
 });
 
 http.listen(port, () => {
