@@ -36,40 +36,25 @@
     <script defer>
       var socket = io();
 
-      remote.querySelectorAll('button.speed').forEach(button => {
+      remote.querySelectorAll('button.speed').forEach((button, i) => {
           button.addEventListener('click', () => {
-              
-          })
+            socket.emit('change speed', i);
+          });
       });
-
-    //   form.addEventListener('submit', function(e) {
-    //     e.preventDefault();
-    //     if (input.value) {
-    //       socket.emit('chat message', input.value);
-    //       input.value = '';
-    //     }
-    //   });
-
-    //   socket.on('chat message', function(msg) {
-    //     var item = document.createElement('li');
-    //     item.textContent = msg;
-    //     messages.appendChild(item);
-    //     window.scrollTo(0, document.body.scrollHeight);
-    //   });
     </script>
 </head>
 <body>
     <form id="remote">
         <div class="container">
-            <button class="speed" name="speed1">1</button>
-            <button class="speed" name="speed2">2</button>
-            <button class="speed" name="speed3">3</button>
-            <button class="speed" name="speed4">4</button>
-            <button class="speed" name="speed5">5</button>
-            <button class="speed" name="speed6">6</button>
-            <button class="speed" name="speed7">7</button>
-            <button class="speed" name="speed8">8</button>
-            <button class="speed" name="speed9">9</button>
+            <button class="speed">1</button>
+            <button class="speed">2</button>
+            <button class="speed">3</button>
+            <button class="speed">4</button>
+            <button class="speed">5</button>
+            <button class="speed">6</button>
+            <button class="speed">7</button>
+            <button class="speed">8</button>
+            <button class="speed">9</button>
         </div>
     </form>
 </body>

@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  socket.on('button press', msg => {
-    io.emit('button press', msg);
+  socket.on('change speed', speed => {
+    io.emit('change speed', speed);
   });
 });
 
