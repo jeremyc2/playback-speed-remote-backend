@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +33,26 @@
             font-family: inherit;
             font-size: x-large;
         }
+
+        @media screen and (max-width: 500px) {
+            form {
+                display: flex;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+                width: 50%;
+                height: 100vh;
+            }
+
+            button {
+                height: 100%;
+            }
+
+            span {
+                transform: rotate(-90deg);
+            }
+        }
     </style>
     <script src="/socket.io/socket.io.js"></script>
     <script src="remote.js" defer></script>
@@ -39,20 +60,20 @@
 <body>
     <form id="remote">
         <div class="container">
-            <button class="speed">1</button>
-            <button class="speed">2</button>
-            <button class="speed">3</button>
-            <button class="speed">4</button>
-            <button class="speed">5</button>
-            <button class="speed">6</button>
-            <button class="speed">7</button>
-            <button class="speed">8</button>
-            <button class="speed">9</button>
+            <button class="speed"><span>1</span></button>
+            <button class="speed"><span>2</span></button>
+            <button class="speed"><span>3</span></button>
+            <button class="speed"><span>4</span></button>
+            <button class="speed"><span>5</span></button>
+            <button class="speed"><span>6</span></button>
+            <button class="speed"><span>7</span></button>
+            <button class="speed"><span>8</span></button>
+            <button class="speed"><span>9</span></button>
         </div>
         <div class="container">
-            <button name="skipBack">&lt;&lt;</button>
-            <button name="playPause">►/&nbsp;l&nbsp;l</button>
-            <button name="skipForward">&gt;&gt;</button>
+            <button name="skipBack"><span>&lt;&lt;</span></button>
+            <button name="playPause"><span>►/&nbsp;l&nbsp;l</span></button>
+            <button name="skipForward"><span>&gt;&gt;</span></button>
         </div>
     </form>
 </body>
