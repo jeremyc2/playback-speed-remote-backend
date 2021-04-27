@@ -37,6 +37,27 @@
             background-color: rgba(239, 239, 239, 0.6);
         }
 
+        #skipBack {
+            background-image: url(skip_previous_black_24dp.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 50%;
+        }
+
+        #playPause {
+            background-image: url(play_pause_black.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 50%;
+        }
+
+        #skipForward {
+            background-image: url(skip_next_black_24dp.svg); 
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-size: auto 50%;
+        }
+
         @media screen and (max-width: 500px) {
             form {
                 display: flex;
@@ -74,9 +95,9 @@
             <button class="speed"><span>9</span></button>
         </div>
         <div class="container">
-            <button name="skipBack"><span>&lt;&lt;</span></button>
-            <button name="playPause"><span>►/&nbsp;l&nbsp;l</span></button>
-            <button name="skipForward"><span>&gt;&gt;</span></button>
+            <button name="skipBack" id="skipBack"></button>
+            <button name="playPause" id="playPause"></button>
+            <button name="skipForward" id="skipForward"></button>
         </div>
     </form>
 </body>
