@@ -37,25 +37,31 @@
             background-color: rgba(239, 239, 239, 0.6);
         }
 
-        #skipBack {
-            background-image: url(skip_previous_black_24dp.svg);
+        .svg {
             background-repeat: no-repeat;
             background-position: center;
-            background-size: auto 50%;
+            background-size: auto 3rem;
+        }
+
+        #skipBack {
+            background-image: url(skip_previous_black_24dp.svg);
         }
 
         #playPause {
             background-image: url(play_pause_black.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: auto 50%;
         }
 
         #skipForward {
-            background-image: url(skip_next_black_24dp.svg); 
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-size: auto 50%;
+            background-image: url(skip_next_black_24dp.svg);
+        }
+
+        button > div {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        button > div.svg {
+            height: 50%;
         }
 
         @media screen and (max-width: 500px) {
@@ -73,7 +79,7 @@
                 height: 100%;
             }
 
-            span {
+            button > div {
                 transform: rotate(-90deg);
             }
         }
@@ -84,20 +90,20 @@
 <body>
     <form id="remote">
         <div class="container">
-            <button class="speed"><span>1</span></button>
-            <button class="speed"><span>2</span></button>
-            <button class="speed"><span>3</span></button>
-            <button class="speed"><span>4</span></button>
-            <button class="speed"><span>5</span></button>
-            <button class="speed"><span>6</span></button>
-            <button class="speed"><span>7</span></button>
-            <button class="speed"><span>8</span></button>
-            <button class="speed"><span>9</span></button>
+            <button class="speed"><div>1</div></button>
+            <button class="speed"><div>2</div></button>
+            <button class="speed"><div>3</div></button>
+            <button class="speed"><div>4</div></button>
+            <button class="speed"><div>5</div></button>
+            <button class="speed"><div>6</div></button>
+            <button class="speed"><div>7</div></button>
+            <button class="speed"><div>8</div></button>
+            <button class="speed"><div>9</div></button>
         </div>
         <div class="container">
-            <button name="skipBack" id="skipBack"></button>
-            <button name="playPause" id="playPause"></button>
-            <button name="skipForward" id="skipForward"></button>
+            <button name="skipBack"><div id="skipBack" class="svg"></div></button>
+            <button name="playPause"><div id="playPause" class="svg"></div></button>
+            <button name="skipForward"><div id="skipForward" class="svg"></div></button>
         </div>
     </form>
 </body>
