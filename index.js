@@ -8,7 +8,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-    res.sendFile(__dirname + req.url);
+    const url = require('url');
+    var reqUrl = new url(req.url);
+    res.sendFile(__dirname + reqUrl.pathname);
 });
 
 io.on('connection', (socket) => {
