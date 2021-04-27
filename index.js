@@ -8,8 +8,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-    const url = require('url');
-    var reqUrl = new url(req.url);
+    const { URL } = require('url'); 
+    var baseURL = 'http://' + req.headers.host + '/';
+    var reqUrl = new URL(req.url, baseURL);
     res.sendFile(__dirname + reqUrl.pathname);
 });
 
