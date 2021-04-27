@@ -1,4 +1,5 @@
 var socket = io();
+const id = new URLSearchParams(document.location.search).get("id");
 
 remote.querySelectorAll('button.speed').forEach((button, i) => {
     button.addEventListener('click', () => {
