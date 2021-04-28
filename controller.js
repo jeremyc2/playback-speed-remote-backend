@@ -1,5 +1,4 @@
 var socket = io();
-const id = new URLSearchParams(document.location.search).get("id");
 
 socket.on('change-speed', function(speed) {
     window.parent.postMessage({type: "change-speed", speed}, "*");
