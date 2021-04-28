@@ -15,17 +15,20 @@ app.get('/*', (req, res) => {
 });
 
 io.on('connection', (socket) => {
+  socket.on('join-room', id => {
+    socket.join(id);
+  });
   socket.on('change-speed', speed => {
-    io.emit('change-speed', speed);
+    io.to([...socket.rooms][1]).emit('change-speed', speed);
   });
   socket.on('skip-back', () => {
-    io.emit('skip-back');
+    io.to([...socket.rooms][1]).emit('skip-back');
   });
   socket.on('play-pause', () => {
-    io.emit('play-pause');
+    io.to([...socket.rooms][1]).emit('play-pause');
   });
   socket.on('skip-forward', () => {
-    io.emit('skip-forward');
+    io.to([...socket.rooms][1]).emit('skip-forward');
   });
 });
 

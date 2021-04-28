@@ -1,6 +1,8 @@
 var socket = io();
 const id = new URLSearchParams(document.location.search).get("id");
 
+socket.emit('join-room', id)
+
 remote.querySelectorAll('button.speed').forEach((button, i) => {
     button.addEventListener('click', () => {
       socket.emit('change-speed', i + 1);
