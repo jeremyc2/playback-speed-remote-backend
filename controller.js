@@ -1,4 +1,8 @@
 var socket = io();
+socket.on("connect", () => {
+  console.log(socket.id);
+});
+
 const id = new URLSearchParams(document.location.search).get("id");
 
 socket.on('change-speed', function(speed) {
