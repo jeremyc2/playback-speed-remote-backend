@@ -19,16 +19,28 @@ io.on('connection', (socket) => {
     socket.join(id);
   });
   socket.on('change-speed', speed => {
-    io.to([...socket.rooms][1]).emit('change-speed', speed);
+    var room = [...socket.rooms][1];
+    if(room != null) {
+      io.to(room).emit('change-speed', speed);
+    }
   });
   socket.on('skip-back', () => {
-    io.to([...socket.rooms][1]).emit('skip-back');
+    var room = [...socket.rooms][1];
+    if(room != null) {
+      io.to(room).emit('skip-back');
+    }
   });
   socket.on('play-pause', () => {
-    io.to([...socket.rooms][1]).emit('play-pause');
+    var room = [...socket.rooms][1];
+    if(room != null) {
+      io.to(room).emit('play-pause');
+    }
   });
   socket.on('skip-forward', () => {
-    io.to([...socket.rooms][1]).emit('skip-forward');
+    var room = [...socket.rooms][1];
+    if(room != null) {
+      io.to(room).emit('skip-forward');
+    }
   });
 });
 
