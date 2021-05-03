@@ -3,6 +3,10 @@ const id = new URLSearchParams(document.location.search).get("id");
 
 socket.emit('join-room', id);
 
+socket.on('disconnect', function() {
+  console.log('disconnected');
+});
+
 remote.querySelectorAll('button.speed').forEach((button, i) => {
     button.addEventListener('click', () => {
       socket.emit('change-speed', i + 1);
