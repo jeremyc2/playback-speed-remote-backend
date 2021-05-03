@@ -1,10 +1,15 @@
 var socket = io();
-const id = new URLSearchParams(document.location.search).get("id");
-
-socket.emit('join-room', id);
 
 socket.on('disconnect', function() {
   console.log('disconnected');
+});
+
+socket.on('connect', function() {
+  console.log('connected');
+
+  const id = new URLSearchParams(document.location.search).get("id");
+
+  socket.emit('join-room', id);
 });
 
 remote.querySelectorAll('button.speed').forEach((button, i) => {
